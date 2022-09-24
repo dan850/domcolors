@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h2>Primary Colors And Numbers Game</h2>
+<h1>Primary Colors And Numbers Game</h1>
 
 
 
@@ -12,8 +12,12 @@
 <p> Loop through Numbers</p>
 
 
+<h2>For Loop</h2>
 
 <p id="forLoop"></p>
+
+<h2>While Loop</h2>
+
 <p id="whileLoop"></p>
 
 
@@ -97,17 +101,21 @@ window.addEventListener("resize", function(){
 
 
 let text = "";
+let highNumber=0;
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 6; i++) {
   text += "The number is " + (i*5) + "<br>";
+  highNumber = i*5;
 
 }
 
+console.log(highNumber);
+
 let text2 = "";
-let i2 = 0;
-while (i2 < 10) {
+let i2 = highNumber;
+while (i2 > 10) {
   text2 += "<br>The number was " + i2;
-  i2++;
+  i2--;
 }
 document.getElementById("whileLoop").innerHTML = text2;
 
