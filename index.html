@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Primary Colors Game</h2>
+
+
+
+
+<button class="colButton">Number of Clicks</button>
+<div class="append">0</div>
+<p> Number</p>
+
+
+
+
+
+<p id="demo"></p>
+
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;color:#ffffff;">
+RED</div>
+
+
+<div onmousedown="mDown2(this)" onmouseup="mUp2(this)"
+style="background-color:#FFF933;width:90px;height:20px;padding:40px;color:#ffffff;">
+YELLOW
+
+
+<div onmousedown="mDown3(this)" onmouseup="mUp3(this)"
+style="background-color:#333CFF;width:90px;height:20px;padding:40px;color:#ffffff;">
+BLUE</div>
+
+
+<!----->
+<script>
+
+function mDown(obj) {
+  obj.style.backgroundColor = "#000000";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#FFC300";
+  obj.innerHTML="Thank You";
+}
+
+function mDown2(obj) {
+  obj.style.backgroundColor = "#000000";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp2(obj) {
+  obj.style.backgroundColor="#24E114";
+  obj.innerHTML="Thank You";
+}
+
+
+function mDown3(obj) {
+  obj.style.backgroundColor = "#000000";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp3(obj) {
+  obj.style.backgroundColor="#9D14E1";
+  obj.innerHTML="Thank You";
+}
+
+
+
+
+let colButton = document.querySelector(".colButton");
+
+let clickCount = 0;
+
+colButton.addEventListener("click", function() 
+{
+  clickCount += 1;
+  document.querySelector('.append').textContent = clickCount;
+});
+
+
+
+
+
+let x = 0;
+
+
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = x++;
+});
+</script>
+<!----->
+
+
+</body>
+</html>
